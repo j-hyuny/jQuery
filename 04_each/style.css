@@ -24,44 +24,46 @@ h1 {
   text-align: center;
 }
 
-.cards {
-  list-style: none; /*ul일 때 적용*/
-  display: flex;
-  justify-content: space-between;
+.card {
+  width: 400px;
+  background: #fff;
+  border-radius: 6px;
+  margin: 0 auto;
+  overflow: hidden; /*윗부분 라운드 처리*/
 }
 
-.cards li {
-  width: 32%;
-  cursor: pointer;
+.card_photo {
   position: relative;
-  overflow: hidden;
 }
 
-.cards li img {
-  transition: all 0.3s;
+.card_info {
+  padding: 10px 16px 20px;
 }
 
-.cards li.active img {
-  transform: scale(1.2);
+.sns {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  bottom: 12px;
+  right: 12px;
 }
 
-.cards li p {
-  position: absolute; /*부모요소가 position relative 여야 가능*/
-  bottom: 0;
+.sns span {
+  display: block;
+  position: absolute;
+  top: 0;
   left: 0;
   width: 100%;
-  height: 60px;
-  background: rgba(0, 0, 0, 0.6);
-  color: #eee;
-  line-height: 60px;
-  padding: 0 1rem;
-  opacity: 0;
+  height: 100%;
+  color: #fff;
+  font-size: 30px;
+  line-height: 50px;
+  text-align: center;
 }
 
-.cards li:nth-child(1) p {
-  bottom: -60px;
-}
-
-.cards li:nth-child(3) p {
-  left: -100%;
+.sns span.share {
+  background: green;
+  border-radius: 50%;
+  z-index: 1;
+  cursor: pointer;
 }
