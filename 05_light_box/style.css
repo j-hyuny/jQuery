@@ -51,9 +51,13 @@ h1 {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  display: none;
+  visibility: hidden;
 }
 
 .dimm img {
   height: 80%;
+}
+
+.show {
+  visibility: visible;
 }
