@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css" />
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+    <title>jQuery | nav clone</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <nav class="nav">
+          <div class="logo"><img src="./images/logo.svg" alt="" /></div>
+          <ul class="gnb">
+            <li>menu1</li>
+            <li>menu2</li>
+            <li>menu3</li>
+            <li>menu4</li>
+            <li>menu5</li>
+            <li>menu6</li>
+          </ul>
+          <div class="social">
+            <a href="#"><i class="xi-kakaotalk"></i></a>
+            <a href="#"><i class="xi-youtube-play"></i></a>
+          </div>
+        </nav>
+      </header>
+      <main>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis at commodi natus tempora quam perspiciatis
+          nesciunt non nulla nemo dolor ut itaque animi, placeat eius blanditiis molestiae iusto similique fugit
+          nostrum. Qui, velit? Esse, debitis placeat assumenda maiores quaerat ipsam iste optio, hic, voluptate
+          perspiciatis vitae quod? Fugiat rerum nesciunt perspiciatis, tempora at labore, officia aliquam aperiam est
+          voluptatibus aut quis vel quae explicabo soluta vero adipisci corrupti molestias suscipit nobis obcaecati
+          distinctio ea! Sint quaerat ut modi quae natus doloremque ducimus mollitia amet expedita consequuntur saepe
+          asperiores, illum ipsa necessitatibus, nobis cupiditate, a suscipit deleniti. Porro voluptatibus quis dolore
+          dicta harum iste numquam temporibus sit iusto laborum? Alias debitis quisquam fugit dolorem, est quam? Quo
+          nesciunt quae maiores. Eius qui libero dolorem asperiores deleniti saepe reprehenderit, vitae laboriosam
+          suscipit voluptatum. Autem, minima! Alias, nisi. Quidem quia voluptatem qui tempora repudiandae eos eveniet
+          nihil iusto rem atque! Pariatur iure reiciendis earum, optio nostrum laborum aperiam ipsa, tenetur praesentium
+          itaque, doloremque soluta ipsam quidem dolore blanditiis vero maxime corrupti consectetur ducimus natus! Dicta
+          magnam modi cumque minus officiis voluptate amet voluptates, accusantium in reprehenderit dolorem doloribus
+          labore excepturi repellendus aliquam maiores, esse laborum autem asperiores ex culpa cum delectus ipsum! Esse
+          ad vero sapiente optio blanditiis obcaecati soluta doloribus sequi animi consequatur. Facere sit vitae dolores
+          reprehenderit doloribus illo adipisci dicta aspernatur culpa id, quas placeat nemo! At accusamus, delectus ad
+          unde nulla voluptatum, ipsam possimus facilis officia neque excepturi, quam doloremque? Nemo dolorum nihil
+          earum possimus labore amet dolore tempore, iste commodi, voluptatibus in fuga quo laborum tenetur quos odio
+          perspiciatis quidem ea at cupiditate facilis nostrum. Mollitia, nihil repellat eaque quisquam alias numquam
+          architecto ea vero velit fugiat omnis iure, cupiditate reprehenderit! Quam maiores magnam, totam dolorem quod
+          quisquam fugit amet pariatur quas molestias eveniet fugiat, quia laborum animi ea optio perferendis magni
+          ratione, sint voluptas quae tenetur accusantium suscipit? Impedit consequatur, ipsam laboriosam obcaecati quos
+          aliquam itaque harum perferendis unde id animi eaque, voluptatum a velit dignissimos atque sunt repudiandae
+          dolorem eius debitis minus incidunt tempora ipsa accusamus? Deleniti, impedit veniam. Eveniet quasi dolor, at
+          in suscipit sed cum dolorem molestias dignissimos aspernatur, est rem. Sit tempora sint unde amet quam, et
+          enim. Et explicabo magni, corporis assumenda vel modi vitae exercitationem dignissimos quibusdam libero eaque
+          adipisci provident saepe officia architecto similique ullam, rem temporibus hic in voluptatibus repellat!
+          Consequatur voluptatem beatae magnam non exercitationem id a voluptates expedita, obcaecati assumenda, alias
+          recusandae consequuntur inventore totam eum? Dolor est labore culpa dolorum vel aliquam dicta eveniet ipsum.
+          Inventore voluptatem nihil iste optio facere expedita, ipsum laborum, harum, animi perspiciatis assumenda qui
+          sunt temporibus velit maiores nam omnis! Laborum, corrupti! Voluptates, iure aliquam ex a, ratione voluptate
+          hic fugit debitis doloremque quis itaque facilis laboriosam natus deleniti doloribus! Dolor, aspernatur rem
+          fugit dolorum voluptate vel molestiae rerum praesentium ut odit incidunt perspiciatis quos in! Natus
+          voluptatem laboriosam neque non assumenda officiis. Quia optio perferendis, minima ducimus quod saepe nulla
+          eligendi ipsum animi quidem voluptate dolore dicta repellat, laborum iste?
+        </p>
+      </main>
+    </div>
+
+    <script>
+      var header = $('.header')
+      var headerContent = header.contents().clone()
+      var header2 = $('<header class="header2"></header>')
+
+      header2.append(headerContent)
+      header2.prependTo('.container')
+
+      var scrollValue = header.outerHeight() + 50
+
+      $(window).on('scroll', function () {
+        if ($(this).scrollTop() >= scrollValue) {
+          header2.addClass('show')
+        } else {
+          header2.removeClass('show')
+        }
+      })
+    </script>
+  </body>
+</html>
